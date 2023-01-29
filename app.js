@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json({ limit: "50mb" }));
 
-app.post("/register", async (req, res) => {
+app.post("/api/v1/auth/register", async (req, res) => {
   try {
 
     // Get user input
@@ -59,7 +59,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post("/api/v1/auth/login", async (req, res) => {
   try {
 
     // Get user input
@@ -96,7 +96,8 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get("/welcome", auth, (req, res) => {
+// Protected Content
+app.get("/api/v1/user-content", auth, (req, res) => {
   res.status(200).send("Welcome 🙌 ");
 });
 
