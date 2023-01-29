@@ -29,3 +29,15 @@ MONGO_URI=mongodb+srv://....
     "password":"XXXXXXXX"
 }
 ```
+
+### Access Protected Content with JWT Token
+
+- GET http://localhost:4001/welcome
+- @Request Header
+```json
+x-access-token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkNjZhZjM1OGEyYzE1N2M0Y2I4MTQwIiwiZW1haWwiOiJyYXN5c2JveEBob3RtYWlsLmNvbSIsImlhdCI6MTY3NTAwMDQ4NCwiZXhwIjoxNjc1MDA3Njg0fQ.YP0uLuQ6cPBtVnn2gNkdt4D-8pVc2q8Fm5nGMcKj-pI
+```
+
+- @Response Status: 200 OK
+- Welcome 🙌

@@ -13,6 +13,7 @@ app.use(express.json({ limit: "50mb" }));
 
 app.post("/register", async (req, res) => {
   try {
+
     // Get user input
     const { first_name, last_name, email, password } = req.body;
 
@@ -60,6 +61,7 @@ app.post("/register", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   try {
+
     // Get user input
     const { email, password } = req.body;
 
@@ -67,10 +69,12 @@ app.post("/login", async (req, res) => {
     if (!(email && password)) {
       res.status(400).send("All input is required");
     }
+
     // Validate if user exist in our database
     const user = await User.findOne({ email });
 
     if (user && (await bcrypt.compare(password, user.password))) {
+
       // Create token
       const token = jwt.sign(
         { user_id: user._id, email },
