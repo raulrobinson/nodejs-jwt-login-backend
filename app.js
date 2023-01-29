@@ -98,10 +98,10 @@ app.post("/api/v1/auth/login", async (req, res) => {
 
 // Protected Content
 app.get("/api/v1/user-content", auth, (req, res) => {
-  res.status(200).send("Welcome 🙌 ");
+  res.status(200).send("Welcome to the user content... 🙌 ");
 });
 
-// This should be the last route else any after it won't work
+// Public Content, this should be the last route else any after it won't work
 app.use("*", (req, res) => {
   res.status(404).json({
     success: "false",

@@ -9,7 +9,7 @@ MONGO_URI=mongodb+srv://....
 ```
 
 ### Register User
-- POST - http://localhost:4001/register
+- POST - http://localhost:4001/api/v1/auth/register
 - @Request Body
 ```json
 {
@@ -21,7 +21,7 @@ MONGO_URI=mongodb+srv://....
 ```
 
 ### Login User
-- POST - http://localhost:4001/login
+- POST - http://localhost:4001/api/v1/auth/login
 - @Request Body
 ```json
 {
@@ -32,7 +32,7 @@ MONGO_URI=mongodb+srv://....
 
 ### Access Protected Content with JWT Token
 
-- GET http://localhost:4001/welcome
+- GET http://localhost:4001/api/v1/user-content
 - @Request Header
 ```json
 x-access-token
