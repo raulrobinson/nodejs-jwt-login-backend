@@ -98,7 +98,7 @@ app.post("/api/v1/auth/login", async (req, res) => {
 
 // Protected Content
 app.get("/api/v1/user-content", auth, (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://angular-login-jwt.herokuapp.com');
   res.status(200).send("Welcome to the user content... 🙌 ");
 });
 
