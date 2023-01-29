@@ -1,5 +1,6 @@
 # NodeJS back-end for JWT Login with Token
 
+### Environment variable
 Create file in root path with name **.env** and add configuration environment variables.
 ```text
 API_PORT=4001
@@ -7,11 +8,10 @@ TOKEN_KEY=AppSecretKeyHere
 MONGO_URI=mongodb+srv://....
 ```
 
+### Register User
+- POST - http://localhost:4001/register
+- @Request Body
 ```json
-POST - http://localhost:4001/register
-
-@Request Body
-
 {
     "first_name":"firstname",
     "last_name":"lastname",
@@ -20,11 +20,10 @@ POST - http://localhost:4001/register
 }
 ```
 
+### Login User
+- POST - http://localhost:4001/login
+- @Request Body
 ```json
-POST - http://localhost:4001/login
-
-@Request Body
-        
 {
     "email":"email@correo.com",
     "password":"XXXXXXXX"
