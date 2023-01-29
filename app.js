@@ -103,6 +103,7 @@ app.get("/api/v1/user-content", auth, (req, res) => {
 
 // Public Content, this should be the last route else any after it won't work
 app.use("*", (req, res) => {
+  res.header('Access-Control-Allow-Origin', '*');
   res.status(404).json({
     success: "false",
     message: "Page not found",
