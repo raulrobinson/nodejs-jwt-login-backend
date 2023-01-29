@@ -98,7 +98,8 @@ app.post("/api/v1/auth/login", async (req, res) => {
 
 // Protected Content
 app.get("/api/v1/user-content", auth, (req, res) => {
-  res.header('Access-Control-Allow-Origin', 'https://angular-login-jwt.herokuapp.com/');
+  res.header('Access-Control-Allow-Origin', 'https://angular-login-jwt.herokuapp.com');
+  res.header('x-access-token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjNkNjZhZjM1OGEyYzE1N2M0Y2I4MTQwIiwiZW1haWwiOiJyYXN5c2JveEBob3RtYWlsLmNvbSIsImlhdCI6MTY3NTAwMDk4MywiZXhwIjoxNjc1MDA4MTgzfQ.N4CUIYPb5rPgirVzG_-d_DDLOuUNmy05ciFWZMQYzo8');
   res.status(200).send("Welcome to the user content... 🙌 ");
 });
 
