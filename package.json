@@ -1,7 +1,7 @@
 {
-  "name": "jwt-project",
+  "name": "nodejs-jwt-login-backend",
   "version": "1.0.0",
-  "description": "A demo about authentication using jwt",
+  "description": "Demo about authentication using JWT Token",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Olanetsoft/jwt-project.git"
+    "url": "git+https://github.com/raulrobinson/nodejs-jwt-login-backend.git"
   },
   "keywords": [
     "jwt",
     "node",
     "authentication"
   ],
-  "author": "Idris Olubisi",
+  "author": "Raul Robinson Bolivar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Olanetsoft/jwt-project/issues"
+    "url": "https://github.com/raulrobinson/nodejs-jwt-login-backend/issues"
   },
-  "homepage": "https://github.com/Olanetsoft/jwt-project#readme",
+  "homepage": "https://github.com/raulrobinson/nodejs-jwt-login-backend#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
